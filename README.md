@@ -1,4 +1,4 @@
-<img src="src/extension.jpg" alt="Sweeper" width="300" height="200" style="display: block; margin: 0 auto;">
+<img src="src/extension.jpg" alt="Sweeper" width="300" height="300" style="display: block; margin: 0 auto;">
 
 # **Sweeper – AI Comment Cleanup for VS Code**  
 
