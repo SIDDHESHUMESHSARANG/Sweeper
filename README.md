@@ -12,7 +12,9 @@
 
 ## Currently Supports
  - C
+ - Java
  - Python
+ - TypeScript 
  - JavaScript 
 ### Support for other language is coming soon..Stay Tuned... 
 
