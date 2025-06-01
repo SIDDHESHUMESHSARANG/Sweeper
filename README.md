@@ -46,7 +46,7 @@ Sweeper works **out of the box**, but future updates may introduce **custom filt
 🔹 **Expanded support** for more programming languages  
 
 ## **Contributing**  
-Have an idea? Found a bug? Submit an issue or a pull request to the **Sweeper** repository (link to be added once repo is live).  
+Have an idea? Found a bug? Submit an issue or a pull request to the **Sweeper** repository. 
 
 ## **License**  
 📝 **MIT License** – Free to use, modify, and distribute!  
