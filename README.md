@@ -1,4 +1,4 @@
-![Sweeper](src/extension.jpg)
+<img src="src/extension.jpg" alt="Sweeper" width="300" height="200">
 
 # **Sweeper – AI Comment Cleanup for VS Code**  
 
