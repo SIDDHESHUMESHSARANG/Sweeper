@@ -10,6 +10,12 @@
 ✅ **One-click cleanup** with an easy-to-use command  
 ✅ **Supports multiple programming languages**  
 
+## Currently Supports
+ - C
+ - Python
+ - JavaScript 
+### Support for other language is coming soon..Stay Tuned... 
+
 ## **Installation**  
 1. Open **VS Code**.  
 2. Navigate to the **Extensions Marketplace** (Ctrl+Shift+X).  
