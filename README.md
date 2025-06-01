@@ -1,3 +1,5 @@
+![Sweeper](src/extension.jpg)
+
 # **Sweeper – AI Comment Cleanup for VS Code**  
 
 🚀 **Sweeper** is a lightweight VS Code extension that removes AI-generated and unnecessary comments while keeping manually written ones intact.  
