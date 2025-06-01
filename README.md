@@ -16,7 +16,7 @@
  - Python
  - TypeScript 
  - JavaScript 
-### Support for other languages are coming soon..Stay Tuned... 
+#### Support for other languages is coming soon. Stay tuned! 
 
 ## **Installation**  
 1. Open **VS Code**.  
