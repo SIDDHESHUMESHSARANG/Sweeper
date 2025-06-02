@@ -1,7 +1,7 @@
 {
     "name": "sweeper",
     "displayName": "File Extension Viewer",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A VS Code extension which shows the current file's extension.",
     "main": "extension.js",
     "engines": {
