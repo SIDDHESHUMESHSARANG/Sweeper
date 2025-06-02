@@ -19,8 +19,8 @@ function activate(context) {
             regex = /\/\/.*|\/\*[\s\S]*?\*\//g; // JS-style: // and /* */
         } else if (['py', 'sh'].includes(fileExtension)) {
             regex = /#.*/g; // Python/bash style
-        } else if (['html','css','lua','sql'].includes(fileExtension) ){    //v.1.0.1 update
-            regex = /<!--[\s\S]*?-->|\/\*[\s\S]*?\*\//|/\/.*|--\[\[[\s\S]*?\]\]|--.*?|^[Cc*!].*/gm;
+        } else if (['html','css','lua','sql'].includes(fileExtension) ) {   
+            regex = /<!--[\s\S]*?-->|\/\*[\s\S]*?\*\//|/.*|--\[\[[\s\S]*?\]\]|--.*?|^[Cc*!].*/gm;
         } else {
             vscode.window.showInformationMessage(
                 `${fileExtension} files are currently not supported by Sweeper.`);
@@ -40,10 +40,10 @@ function activate(context) {
             editBuilder.replace(fullRange, cleanedText);
         });
 
-        if (num == 1) {
+        if (num === 1) {
             vscode.window.showInformationMessage(`1 comment removed from .${fileExtension} file!`);
-        } else if (num == 0) {
-            vscode.window.showInformationMessage(`no comments to removed from .${fileExtension} file!`);
+        } else if (num === 0) {
+            vscode.window.showInformationMessage(`No comments removed from .${fileExtension} file!`);
         } else {
             vscode.window.showInformationMessage(`${num} comments removed from .${fileExtension} file!`);
         }
