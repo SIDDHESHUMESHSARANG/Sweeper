@@ -34,7 +34,7 @@
 
 ## **Usage**  
 - Open a file containing comments.  
-- Press **Ctrl+Shift+P**, then type **"Remove Comments from Code"**.  
+- Press **Ctrl+Shift+P**, then type **"Sweep Comments"**.  
 - **Sweeper** will intelligently remove AI-generated comments while preserving essential ones!  
 
 ## **Commands**  
