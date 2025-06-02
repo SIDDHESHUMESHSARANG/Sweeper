@@ -51,4 +51,6 @@ Have an idea? Found a bug? Submit an issue or a pull request to the **Sweeper** 
 ## **License**  
 📝 **MIT License** – Free to use, modify, and distribute!  
 
+### wondering where's v1.0.1?? stay tuned!!
+
 ---
