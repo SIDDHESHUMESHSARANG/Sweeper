@@ -22,8 +22,8 @@
 <p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
 <img width="40" height="40" src="https://img.icons8.com/color/48/sql.png" alt="sql"/>
 <img width="40" height="40" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-lua-is-a-lightweight-multi-paradigm-programming-language-logo-color-tal-revivo.png" alt="external-lua-is-a-lightweight-multi-paradigm-programming-language-logo-color-tal-revivo"/>
-
-
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" height="40" width="40" />
+        
 #### Support for other languages is coming soon. Stay tuned! 
 
 ## **Installation**  
