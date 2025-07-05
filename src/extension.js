@@ -15,11 +15,11 @@ function activate(context) {
         let regex;
 
         // Regex patterns for different file types
-        if (['js', 'ts', 'c', 'java'].includes(fileExtension)) {
+        if (['js'].includes(fileExtension)) {
             regex = /\/\/.*|\/\*[\s\S]*?\*\//g; // JS-style: // and /* */
-        } else if (['py', 'sh'].includes(fileExtension)) {
+        } else if (['py'].includes(fileExtension)) {
             regex = /#.*/g; // Python/bash style
-        } else if (['html','css','lua','sql'].includes(fileExtension) ) {   
+        } else if // This is under development and my boy work properly (['html','css','lua','sql'].includes(fileExtension) ) {   
             regex = /<!--[\s\S]*?-->|\/\*[\s\S]*?\*\//|/.*|--\[\[[\s\S]*?\]\]|--.*?|^[Cc*!].*/gm;
         } else {
             vscode.window.showInformationMessage(
