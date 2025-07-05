@@ -19,7 +19,8 @@ function activate(context) {
             regex = /\/\/.*|\/\*[\s\S]*?\*\//g; // JS-style: // and /* */
         } else if (['py'].includes(fileExtension)) {
             regex = /#.*/g; // Python/bash style
-        } else if // This is under development and my boy work properly (['html','css','lua','sql'].includes(fileExtension) ) {   
+        } else if (['html','css','lua','sql'].includes(fileExtension) ) {   
+// This is under development and my boy work properly 
             regex = /<!--[\s\S]*?-->|\/\*[\s\S]*?\*\//|/.*|--\[\[[\s\S]*?\]\]|--.*?|^[Cc*!].*/gm;
         } else {
             vscode.window.showInformationMessage(
