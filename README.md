@@ -23,7 +23,7 @@
 
 ## Live Demo
 
-[Watch Demo Video](assets/sweeper.mp4)
+![Demo Video](assets/sweeper.gif)
 
 ## **Installation**  
 1. Open **VS Code**.  
