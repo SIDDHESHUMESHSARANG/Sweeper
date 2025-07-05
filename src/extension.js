@@ -20,7 +20,7 @@ function activate(context) {
         } else if (['py'].includes(fileExtension)) {
             regex = /#.*/g; // Python/bash style
         } else if (['html','css','lua','sql'].includes(fileExtension) ) {   
-// This is under development and my boy work properly 
+// This is under development and my not work properly 
             regex = /<!--[\s\S]*?-->|\/\*[\s\S]*?\*\//|/.*|--\[\[[\s\S]*?\]\]|--.*?|^[Cc*!].*/gm;
         } else {
             vscode.window.showInformationMessage(
