@@ -1,4 +1,4 @@
-<img src="src/extension.jpg" alt="Sweeper" width="300" height="300" style="display: block; margin: 0 auto;">
+<img src="assets/extension.jpg" alt="Sweeper" width="300" height="300" style="display: block; margin: 0 auto;">
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 
@@ -20,6 +20,10 @@
 <p align="left"> 
         
 #### Support for other languages is coming soon. Stay tuned! 
+
+## Live Demo
+
+[Watch Demo Video](assets/sweeper.mp4)
 
 ## **Installation**  
 1. Open **VS Code**.  
