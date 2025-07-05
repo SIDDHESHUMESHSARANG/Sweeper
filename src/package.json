@@ -1,6 +1,6 @@
 {
   "name": "sweeper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A VS Code extension that cleans comments from your code.",
   "main": "extension.js",
   "publisher": "SiddheshUmeshSarang",
@@ -22,10 +22,24 @@
         "command": "extension.removeComments",
         "title": "Sweep Comments"
       }
-    ]
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "extension.removeComments",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
   },
+  "activationEvents": [
+    "onCommand:extension.removeComments",
+    "onStartupFinished"
+  ],
   "scripts": {
-    "test": "echo \"test\""
+    "test": "echo \"test\"",
+    "package": "vsce package",
+    "install-local": "code --install-extension sweeper-1.0.2.vsix"
   },
   "keywords": [
     "vscode",
@@ -37,6 +51,7 @@
   "author": "Siddhesh Umesh Sarang",
   "license": "ISC",
   "devDependencies": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.80.0",
+    "vsce": "^2.15.0"
   }
 }
