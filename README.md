@@ -37,6 +37,9 @@
 4. Click **Install**.  
 
 ## **Usage**  
+### Sweeper works automatically when you paste code in your editor.
+
+### But, in case you want to do it manually :
 - Open a file containing comments.  
 - Press **Ctrl+Shift+P**, then type **"Sweep Comments"**.  
 - **Sweeper** will intelligently remove AI-generated comments while preserving essential ones!  
