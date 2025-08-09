@@ -20,6 +20,8 @@
 - Python
 - JavaScript
 - TypeScript
+- C++
+- Java
 - SQL
         
 #### Support for other languages is coming soon. Stay tuned! 
