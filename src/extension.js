@@ -1,26 +1,32 @@
 const vscode = require("vscode");
 
-// Function to remove comments from text
 function removeComments(text, fileExtension) {
   let regex;
+  fileExtension = fileExtension.toLowerCase();
 
-  // Regex patterns for different file types
-  if (["js", "javascript"].includes(fileExtension.toLowerCase())) {
-    regex = /\/\/.*|\/\*[\s\S]*?\*\//g; // JS-style: // and /* */
-  } else if (["py", "python"].includes(fileExtension.toLowerCase())) {
-    regex = /#.*/g; // Python Style
+  if (["js", "javascript", "java","class","cpp","h","c"].includes(fileExtension)) {
+    regex = /\/\/.*|\/\*[\s\S]*?\*\//g;
+  } else if (["tsx", "jsx"].includes(fileExtension)) {
+    regex = /\{\/\*[\s\S]*?\*\/\}|\/\/.*|\/\*[\s\S]*?\*\//g;
+  } else if (["py", "python"].includes(fileExtension)) {
+    regex = /(#.*)|(r?'''[\s\S]*?'''|r?"""[\s\S]*?""")/g;
+  } else if (["sql"].includes(fileExtension)) {
+    regex = `--.*|\/\*[\s\S]*?\*\/`/g;
   } else {
     return { cleanedText: text, num: 0, supported: false };
   }
 
-  const matches = text.match(regex); // Find all comments
-  const num = matches ? matches.length : 0; // Count them
+  if (!regex) {
+      return { cleanedText: text, num: 0, supported: false };
+  }
+
+  const matches = text.match(regex);
+  const num = matches ? matches.length : 0;
   const cleanedText = text.replace(regex, "");
 
   return { cleanedText, num, supported: true };
 }
 
-// Function to get file extension safely
 function getFileExtension(fileName) {
   if (!fileName || fileName.indexOf(".") === -1) {
     return "";
@@ -28,7 +34,6 @@ function getFileExtension(fileName) {
   return fileName.substring(fileName.lastIndexOf(".") + 1);
 }
 
-// Function to process the current editor content
 function processEditorContent(editor) {
   if (!editor) {
     vscode.window.showInformationMessage("No active editor found");
@@ -48,24 +53,8 @@ function processEditorContent(editor) {
   const text = editor.document.getText();
 
   const result = removeComments(text, fileExtension);
-
-  if (!result.supported) {
-    vscode.window.showInformationMessage(
-      `${fileExtension} files are currently not supported by Sweeper.`
-    );
-    return;
-  }
-
-  // Only process if there are actually comments to remove
-  if (result.num === 0) {
-    vscode.window.showInformationMessage(
-      `No comments found in .${fileExtension} file!`
-    );
-    return;
-  }
-
-  editor
-    .edit((editBuilder) => {
+  
+  editor.edit((editBuilder) => {
       const fullRange = new vscode.Range(
         editor.document.positionAt(0),
         editor.document.positionAt(text.length)
@@ -88,11 +77,10 @@ function processEditorContent(editor) {
     });
 }
 
-// Flag to prevent infinite loops
 let isProcessing = false;
 
 function activate(context) {
-  // Register the manual command
+
   const disposable = vscode.commands.registerCommand(
     "extension.removeComments",
     () => {
@@ -102,17 +90,12 @@ function activate(context) {
     }
   );
 
-  // Register paste event listener
   const pasteDisposable = vscode.workspace.onDidChangeTextDocument((event) => {
-    // Prevent infinite loops
     if (isProcessing) return;
-
-    // Check if this is a paste operation
     if (event.contentChanges.length > 0) {
       const change = event.contentChanges[0];
       const editor = vscode.window.activeTextEditor;
 
-      // Better paste detection: large text changes with multiple lines
       if (
         editor &&
         editor.document === event.document &&
@@ -121,7 +104,6 @@ function activate(context) {
       ) {
         isProcessing = true;
 
-        // Small delay to ensure the paste is complete
         setTimeout(() => {
           try {
             processEditorContent(editor);

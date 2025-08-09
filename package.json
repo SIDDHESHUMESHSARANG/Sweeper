@@ -1,10 +1,10 @@
 {
   "name": "sweeper",
-  "version": "1.0.3",
-  "description": "A VS Code extension that cleans comments from your code.",
-  "main": "extension.js",
+  "version": "1.0.4",
+  "description": "A VS Code extension that cleans ai-generated comments from your code.",
+  "main": "src/extension.js",
   "publisher": "SiddheshUmeshSarang",
-  "icon": "extension.jpg",
+  "icon": "assets/sweeper.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/SIDDHESHUMESHSARANG/Sweeper"
