@@ -1,4 +1,6 @@
-<img src="assets/extension.jpg" alt="Sweeper" width="300" height="300" style="display: block; margin: 0 auto;">
+<div align="center">
+<img src="assets/sweeper.png" alt="Sweeper" width="200" height="200" style="display: block; margin: 0 auto;">
+</div> <br /> <br />
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) 
 
@@ -14,10 +16,11 @@
 
 ## Currently Supports
 
-<a href="https://www.python.org" target="_blank" rel="noreferrer">   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
-<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
-<p align="left"> 
+- React JS & TS
+- Python
+- JavaScript
+- TypeScript
+- SQL
         
 #### Support for other languages is coming soon. Stay tuned! 
 
@@ -39,7 +42,6 @@
 ## **Commands**  
 | Command                   | Description                     |  
 |---------------------------|---------------------------------|  
-| `extension.getFileExtension` | Retrieves file type information |  
 | `extension.removeComments`   | Cleans AI-generated comments   |  
 
 ## **Configuration**  
@@ -55,3 +57,4 @@ Have an idea? Found a bug? Submit an issue or a pull request to the **Sweeper** 
 
 ## **License**  
 📝 **MIT License** – Free to use, modify, and distribute!  
+
